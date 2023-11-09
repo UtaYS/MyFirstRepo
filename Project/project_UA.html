@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> HTML5 и CSS3 сайт</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+	<div id="logo" onclick="slowScroll('#top')">
+		<span>Project</span>
+	</div>
+	<div id="about">
+       <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+       <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+       <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+        <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+	</div>
+</header>
+
+<div id="top">
+<h1>Программирование</h1>
+<h3>как стиль жизни!</h3>
+</div>
+
+<div id="main">
+	<div class="intro">
+	<h2>Надеюсь наши услуги помогут вам!</h2>
+<span>А вы знали что...</span>
+</div>
+	<div class="text">
+    <span>В настоящее время на рынке труда наблюдается повышенный спрос на программистов. В то же время профессиональных специалистов сферы информационных технологий явно недостаточно. Поскольку спрос на программистов значительно превышает предложение, работодатели предлагают им высокие конкурентноспособные заработные платы. И такая же тенденция прослеживается во всех странах мира. Высококвалифицированные программисты очень ценятся, все они по праву считаются успешными людьми.</span>
+</div>
+ </div>   
+
+ <div id="overview">
+ 	<h2>Преимущества</h2>
+ 	<h4>С нами всё проще</h4>
+
+ <div class="img">
+ 	<img src="htm.jpg" alt="">
+ 	<span>Изучение языка HTML для начинающих</span>
+ </div>
+
+ <div class="img">
+ 	<img src="photo.jpg" alt="">
+ 	<span>Уроки PhotoShop для начинающих</span>
+ </div>
+
+ <div class="img">
+ 	<img src="swift.png" alt="">
+ 	<span>Уроки Swift для начинающих</span>
+ </div>
+
+ <div class="img">
+ 	<img src="phyton.jpg" alt="">
+ 	<span>Уроки Python для начинающих</span>
+ </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	function slowScroll(id) {
+		$('html, body').animate({
+scrollTop: $(id).offset().top
+		}, 500);
+	}
+
+	$(document).on("scroll", function (){
+		if($(window).scrollTop() ===0)
+			$("header").removeClass("fixed");
+		else
+			$("header").attr("class","fixed");
+	});
+</script>
+</body>
+</html>
+
+<!-- https://www.youtube.com/watch?v=bTabgnRgD3A
+
+время 24:37 -->
+
+<!-- cntrl+shift+i - вызвать код страницы -->
