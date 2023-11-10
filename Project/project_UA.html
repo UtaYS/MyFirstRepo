@@ -16,10 +16,11 @@
        <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
        <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
        <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
-        <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+       <a href="#" title="Интересные факты" onclick="slowScroll('#faq')">FAQ</a>
+       <a href="#language" title="Интересное" onclick="slowScroll('language)">Интересное</a>
 	</div>
 </header>
-
+<!-- Блок возможности -->
 <div id="top">
 <h1>Программирование</h1>
 <h3>как стиль жизни!</h3>
@@ -35,12 +36,13 @@
 </div>
  </div>   
 
+<!-- Блок преимущества -->
  <div id="overview">
  	<h2>Преимущества</h2>
  	<h4>С нами всё проще</h4>
 
- <div class="img">
- 	<img src="htm.jpg" alt="">
+ <div class="img"> 
+ 	<img src="htm.jpg" alt=""> 
  	<span>Изучение языка HTML для начинающих</span>
  </div>
 
@@ -48,17 +50,38 @@
  	<img src="photo.jpg" alt="">
  	<span>Уроки PhotoShop для начинающих</span>
  </div>
-
- <div class="img">
- 	<img src="swift.png" alt="">
- 	<span>Уроки Swift для начинающих</span>
- </div>
-
- <div class="img">
- 	<img src="phyton.jpg" alt="">
- 	<span>Уроки Python для начинающих</span>
- </div>
 </div>
+
+
+<div id="contacts">
+	<center><h5>Обратная связь</h5></center>
+	<form id="form_input">
+		<label for='name'>Имя<span>*</span></label><br>
+		<input type="text" placeholder="Введите имя" name="name" id="name"><br>
+		<label for='email'>Ваша почта<span>*</span></label><br>
+		<input type="email" placeholder="Введите email" name="email" id="email"><br>
+		<label for='message'>Сообщение<span>*</span></label><br>
+		<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+		<div id="mess_send" class="btn">Отправить</div>
+	</form>
+
+</div>
+</div> 
+
+<div id="faq">
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+
+
+<div id="language">
+	<center><h5>Это интересно</h5></center>
+<div class="text">
+	<span><p><br>HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере. Веб-браузеры получают HTML документ от сервера по протоколам HTTP/HTTPS или открывают с локального диска, далее интерпретируют код в интерфейс, который будет отображаться на экране монитора.</p><br>Элементы HTML являются строительными блоками HTML страниц. С помощью HTML разные конструкции, изображения и другие объекты, такие как интерактивная веб-форма, могут быть встроены в отображаемую страницу. HTML предоставляет средства для создания заголовков, абзацев, списков, ссылок, цитат и других элементов. Элементы HTML выделяются тегами, записанными с использованием угловых скобок. Такие теги, как img  и input , напрямую вводят контент на страницу. Другие теги, такие как p, окружают и оформляют текст внутри себя и могут включать другие теги в качестве подэлементов. Браузеры не отображают HTML-теги, но используют их для интерпретации содержимого страницы.</p></span><br><br>
+<span><p>Adobe Photoshop ([əˈdəʊbɪ ˈfəʊtəʃɒp], Эдо́уби Фотошо́п, рус. интернет-сленг Адо́б Фотошо́п) — многофункциональный растровый графический редактор, разрабатываемый и распространяемый компанией Adobe Systems.</p><br> В основном работает с растровыми изображениями, однако имеет некоторые векторные инструменты. Продукт является лидером рынка в области коммерческих средств редактирования растровых изображений и наиболее известной программой разработчика.В настоящее время Photoshop доступен на платформах macOS, Windows и iPadOS. Для Windows Phone и Android доступна упрощённая версия приложения под названием Adobe Photoshop Touch[8]. Также существует версия Photoshop Express для Windows Phone 8 и 8.1[9][10]. В 2014 году в США проходило бета-тестирование потоковой версии продукта для Chrome OS[11][12].<p></span><br>
+</div></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 	function slowScroll(id) {
@@ -79,6 +102,6 @@ scrollTop: $(id).offset().top
 
 <!-- https://www.youtube.com/watch?v=bTabgnRgD3A
 
-время 24:37 -->
+время 49 минут -->
 
 <!-- cntrl+shift+i - вызвать код страницы -->
