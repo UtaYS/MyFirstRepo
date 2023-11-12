@@ -1,53 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
-.menu-main {
-  list-style: none;
-  margin: 40px 0 5px;
-  padding: 25px 0 5px;
-  text-align: right;
-  background: white;
+/* Глобальные настройки */
+
+*{
+    margin:0;
+    padding:0;
 }
-.menu-main li {display: inline-block;}
-.menu-main li:after {
-  content: "|";
-  color: #606060;
-  display: inline-block;
-  vertical-align:top;
+
+body{ font-family: roboto, sans-serif;}
+
+/* Шапочка + меню*/
+#main-nav{
+	background-color:white;
+	height: 80px;
+	text-align: right;
 }
-.menu-main li:last-child:after {content: none;}
-.menu-main a {
-  text-decoration: none;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  letter-spacing: 2px;
-  position: relative;
-  padding-bottom: 20px;
-  margin: 0 34px 0 30px;
-  font-size: 17px;
-  text-transform: uppercase;
-  display: inline-block;
-  transition: color .2s;
+
+.logo-holder{
+    float:left;
+    padding-left:12px;
+    text-align:left;
+	}
+	
+.logo-img{width: 15%;}
+
+#main-menu{ list-style:none;}
+
+.main-menu-item a{
+    color:#ffe4c4;
+    text-decoration: none;
+    background-color:#d2b48c;
+    padding:10px;
+    margin: 10px;
+    border-radius:5px;
+    display: inline-block;  
 }
-.menu-main a, .menu-main a:visited {color: #9d999d;}
-.menu-main a.current, .menu-main a:hover{color: #feb386;}
-.menu-main a:before,
-.menu-main a:after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  top: auto;
-  right: 50%;
-  bottom: -5px;
-  left: 50%;
-  background: #feb386;
-  transition: .8s;
+
+.main-menu-item a:hover{color:#bc8f8f;}
+
+
+.main-menu-item {
+    display: inline-block;  
 }
-.menu-main a:hover:before, .menu-main .current:before {left: 0;}
-.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
-@media (max-width: 550px) {
-.menu-main {padding-top: 0;}
-.menu-main li {display: block;}
-.menu-main li:after {content: none;}
-.menu-main a {
-  padding: 25px 0 20px; 
-  margin: 0 30px;
+
+/* Обложка с милотой */
+
+.cover {
+    background: url(ras_cover.jpg);
+	background-position: center;
+	background-size:cover;
+	color: #d2b48c;
+	padding: 115px 20% ;
 }
+
+.cover-dinner{
+	background: rgba(0,0,0,0.5);
+	padding:5%;
+	text-align:center;
 }
+
+h1 {
+	font-size:2.5rem;
+	margin-top: -20px;
+	margin-bottom: .025 rem;
+}
+
+p {font-size: 2rem;}
+
+.button-cover{
+	padding:0.7rem;
+	font-size: 1rem;
+	font-weight:bold;
+	background-color:#d2b48c;
+	color: #fff;
+	border:0;
+	border-radius:5px;
+	margin-top:1rem;
+}
+
