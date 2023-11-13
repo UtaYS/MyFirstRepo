@@ -75,4 +75,16 @@ p {font-size: 2rem;}
 	border-radius:5px;
 	margin-top:1rem;
 }
+ /*Раздел фотографии  */
+.photos{
+	width: 80%;
+	background-color: blue;
+	margin: auto;
+	padding-top: 4rem;
+}
 
+h2{
+	text-align: center;
+	padding-bottom: 0.5rem ;
+
+}
