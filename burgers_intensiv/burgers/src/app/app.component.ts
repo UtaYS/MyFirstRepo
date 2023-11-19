@@ -137,5 +137,32 @@ export class AppComponent {
         this.form.reset();
     }
     }
+
+  changeCurrency() {
+
+    let newCurrency = "$";
+    let coefficient = 1;
+
+    if (this.currency === "$") {
+      newCurrency = "₽";
+      coefficient = 89;
+    } else if (this.currency === "₽") {
+      newCurrency = "BYN";
+      coefficient = 3,30;
+    }
+    else if (this.currency === 'BYN') {
+      newCurrency = '€';
+      coefficient = 0,92;
+    } else if (this.currency === '€') {
+      newCurrency = '¥';
+      coefficient = 149;
+    }
+    this.currency = newCurrency;
+
+   this.productsData.forEach((item: any) => {
+     item.price = + (item.basePrice * coefficient).toFixed(1);
+   } )
+  }
 }
+
 
