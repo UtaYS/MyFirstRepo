@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { ReactiveFormsModule, Validators } from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +15,27 @@ export class AppComponent {
   title = 'Бургеры';
   currency = '$';
 
+  form = this.fb.group({
+    order: ["", Validators.required],
+      name: ["", Validators.required],
+      phone: ["", Validators.required],
+
+  })
+
+  constructor(private fb: FormBuilder) {
+  }
+
+
+
   scrollTo(target: HTMLElement) {
     target.scrollIntoView({ behavior: "smooth" });
   }
+
+    confirmOrder(){
+    if (this.form.valid){
+        alert("Спасибо за заказ! Мы скоро свяжемся с Вами!");
+        this.form.reset();
+    }
+    }
 }
 

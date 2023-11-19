@@ -346,17 +346,17 @@
     <img src="./assets/images/delivery.png" alt="Burger in the box" class="order-image">
     <div class="order-form">
       <div class="order-form-text">Заполните все данные и наш менеджер свяжется с вами для подтверждения заказа</div>
-      <div class="order-form-inputs">
-        <div class="order-form-input">
-          <input type="text" placeholder="Ваш заказ" id="burger">
+      <div class="order-form-inputs" [formGroup]="form" >
+        <div class="order-form-input" [class]="{'error': form.get('order')?.invalid && (form.get('order')?.dirty || form.get('order')?.touched) }">
+          <input type="text" placeholder="Ваш заказ" id="burger" formControlName="order">
         </div>
-        <div class="order-form-input">
-          <input type="text" placeholder="Ваше имя" id="name">
+        <div class="order-form-input" [class]="{'error': form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched) }">
+          <input type="text" placeholder="Ваше имя" id="name" formControlName="name">
         </div>
-        <div class="order-form-input">
-          <input type="text" placeholder="Ваш телефон" id="phone">
+        <div class="order-form-input" [class]="{'error': form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched) }">
+          <input type="text" placeholder="Ваш телефон" id="phone" formControlName="phone">
         </div>
-        <button class="button" id="order-action">Оформить заказ</button>
+        <button class="button" id="order-action" (click)="confirmOrder()" [disabled]="!form.valid">Оформить заказ</button>
       </div>
     </div>
   </div>
