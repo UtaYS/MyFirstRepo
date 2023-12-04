@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Manrope', sans-serif;
+    margin: 0;
+}
+
+.header{
+    border-bottom: 1px solid #e5e9f2;
+    height: 73px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container{
+ width: 1110px;
+    margin: auto;
+ display: flex;
+    align-items: center;
+}
+
+.logo{
+margin-right: 40px;
+
+}
+
+img{
+    display: block;
+}
+.appstore{
+    margin-left: auto;
+}
+
+.nav{
+    font-weight: bold;
+    margin-top: -4px;
+    font-size: 14px;
+    line-height: 1;
+    color: #18191f;
+}
+
+.nav-link{
+    color: #18191f;
+    text-decoration: none;
+    margin-right: 32px;
+}
+
+.nav-link:last-child{
+    margin-right: 0;
+}
